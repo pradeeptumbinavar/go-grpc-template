@@ -12,9 +12,9 @@ This project follows the **Hexagonal Architecture (aka Ports and Adapters)**, wh
 
 Also known as **Ports and Adapters**, this architecture splits your app into core logic (inside the hexagon) and various adapters (outside the hexagon). This leads to:
 
-- Better testability
-- Loose coupling
-- Easy replacement of frameworks/tools
+- internal/port/: Defines interfaces (ports) for business logic.
+- internal/service/: Implements business logic (adapters to ports).
+- internal/handler/: gRPC handler, adapts transport to port interface.
 
 ---
 
