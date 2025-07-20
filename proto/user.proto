@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package proto;
+
+option go_package = "go-grpc-template/proto;proto";
+
+// The user service definition.
+service UserService {
+  rpc ListUsers (Empty) returns (UserList) {}
+}
+
+// Empty message for no‑args.
+message Empty {}
+
+// A single user.
+message User {
+  int32 id   = 1;
+  string name = 2;
+}
+
+// A list of users.
+message UserList {
+  repeated User users = 1;
+}

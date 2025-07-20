@@ -1,0 +1,17 @@
+# Go build files
+bin/
+*.exe
+*.out
+*.test
+
+# Generated proto files
+*.pb.go
+*.grpc.pb.go
+
+# IDE/editor settings
+.vscode/
+.idea/
+
+# OS junk files
+.DS_Store
+Thumbs.db
